@@ -1,0 +1,311 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ConvertX - Scannable AI</title>
+
+    <script>
+if(localStorage.getItem("theme") === "dark"){
+    document.documentElement.classList.add("dark");
+}
+</script>
+
+    <style>
+        html.dark, body.dark { background: #0f1117 !important; color: #ffffff !important; transition: none !important; }
+        html, body { transition: none !important; }
+    </style>
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/ocr.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="bg-blur blur1"></div>
+    <div class="bg-blur blur2"></div>
+    <div class="layout">
+        <aside class="sidebar glass">
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                                <div class="logo-box">
+
+                                        <img src="../assets/logo.png.png" alt="ConvertX Logo">
+
+                                </div>
+
+                                <div>
+
+                                        <h2>Convert<span>X</span></h2>
+
+                                        <p>Free forever
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- MENU -->
+
+            <div class="menu">
+
+                <!-- HOME -->
+
+                <a href="index.html">
+
+                    <i data-lucide="house"></i>
+
+                    Home
+
+                </a>
+
+                <!-- CONVERT -->
+
+                <a
+                href="convert.html">
+
+                    <i data-lucide="recycle"></i>
+
+                    Convert
+
+                </a>
+
+                <!-- OCR -->
+
+                <a href="ocr.html"
+                class="active">
+
+                    <i data-lucide="scan-text"></i>
+
+                    Scannable AI
+
+                </a>
+
+                <a href="merge.html">
+
+                    <i data-lucide="file-plus"></i>
+
+                    Merge PDFs
+
+                </a>
+
+                <a href="split.html">
+
+                    <i data-lucide="scissors"></i>
+
+                    Split PDF
+
+                </a>
+
+                <a href="compress.html">
+
+                    <i data-lucide="arrow-down-circle"></i>
+
+                    Compress PDF
+
+                </a>
+
+                <a href="image-compress.html">
+
+                    <i data-lucide="image"></i>
+
+                    Image Compress
+
+                </a>
+
+                <!-- HISTORY -->
+
+                <a href="history.html">
+
+                    <i data-lucide="history"></i>
+
+                    History
+
+                </a>
+
+                <!-- SETTINGS -->
+
+                <a href="settings.html">
+
+                    <i data-lucide="settings"></i>
+
+                    Settings
+
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN -->
+
+        <main class="main-content">
+
+            <!-- UNIVERSAL CONVERTER -->
+
+            <section class="modern-converter glass">
+
+                <!-- TOP -->
+
+                <div class="top-actions">
+
+                    <div class="theme-toggle">
+
+                        <i data-lucide="moon"></i>
+
+                    </div>
+
+                </div>
+
+                <!-- HEADER -->
+
+                <div class="modern-header">
+
+                    <h1>
+
+                        Scannable AI
+
+                    </h1>
+<p>
+    Extract text from images using AI-powered OCR technology.
+</p>
+
+                </div>
+
+                <!-- CONVERT TYPES -->
+
+                
+                    <!-- FROM -->
+<div class="modern-drop" id="dropZone">
+
+    <i data-lucide="scan-text"></i>
+
+    <h2>Upload Image</h2>
+
+    <p>
+        JPG | PNG | JPEG | WEBP
+    </p>
+
+    <input
+    type="file"
+    id="ocrFile"
+    accept=".jpg,.jpeg,.png,.webp"
+    hidden>
+
+    <div class="file-actions">
+        <button
+            class="upload-btn"
+            onclick="document.getElementById('ocrFile').click()">
+            Choose Image
+        </button>
+        <button class="clear-btn" id="clearFiles">Clear</button>
+    </div>
+
+    <p
+        id="selectedFile"
+        class="selected-file">
+
+        No image selected
+
+    </p>
+
+</div>
+<div class="progress-container" id="progressContainer">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+
+
+<p id="progressText"></p>
+<!-- CONVERT -->
+<button
+    type="button"
+    class="convert-btn"
+    id="ocrBtn">
+
+    Extract Text
+
+</button>
+
+
+<!-- EXTRACTED TEXT (match convert.html placement) -->
+<div class="extracted-wrapper" id="ocrResult">
+    <label class="extracted-label">Extracted Text</label>
+    <div class="glass extracted-box" id="extractedBox">No extracted text yet</div>
+    <div class="extracted-actions">
+        <button class="upload-btn" id="copyExtracted">Copy</button>
+        <button class="clear-btn" id="clearExtracted">Clear</button>
+    </div>
+</div>
+
+<!-- INFO -->
+
+<div class="info-grid">
+
+    <!-- FAST -->
+
+    <div class="info-card glass">
+
+        <h3>
+AI OCR
+</h3>
+
+        <p>
+            Extract text from images instantly.
+        </p>
+
+    </div>
+
+    <!-- SECURE -->
+
+    <div class="info-card glass">
+
+        <h3>
+            Secure Files
+        </h3>
+
+        <p>
+            Files are automatically removed after conversion.
+        </p>
+
+    </div>
+    
+
+    <!-- FORMATS -->
+
+    <div class="info-card glass">
+
+        <h3>
+            Multiple Formats
+        </h3>
+
+        <p>
+            Supports JPG, PNG, JPEG, WEBP and more.
+        </p>
+
+    </div>
+
+</div> <!-- info-grid -->
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<script>
+    lucide.createIcons();
+</script>
+
+<script src="../js/script.js"></script>
+<script src="../js/ocr.js"></script>
+
+</body>
+</html>
+
+
+

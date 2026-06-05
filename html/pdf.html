@@ -1,0 +1,399 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>
+  Convert PDF
+  </title>
+
+<script>
+if(localStorage.getItem("theme") === "dark"){
+    document.documentElement.classList.add("dark");
+}
+</script>
+    <style>
+        html.dark, body.dark { background: #0f1117 !important; color: #ffffff !important; transition: none !important; }
+        html, body { transition: none !important; }
+    </style>
+    <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- BLUR -->
+
+    <div class="bg-blur blur1"></div>
+
+    <div class="bg-blur blur2"></div>
+
+    <!-- LAYOUT -->
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar glass">
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <div class="logo-box">
+
+                    <img
+                    src="../assets/logo.png.png"
+                    alt="ConvertX Logo">
+
+                </div>
+
+                <div>
+
+                    <h2>
+
+                        Convert<span>X</span>
+
+                    </h2>
+
+                    <p>
+
+                        Free forever âœ¨
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- MENU -->
+
+            <div class="menu">
+
+                <!-- HOME -->
+
+                <a href="index.html">
+
+                    <i data-lucide="house"></i>
+
+                    Home
+
+                </a>
+
+                <!-- CONVERT -->
+
+                <a
+                href="convert.html"
+                class="active">
+
+                    <i data-lucide="recycle"></i>
+
+                    Convert
+
+                </a>
+
+                <!-- OCR -->
+
+                <a href="ocr.html">
+
+                    <i data-lucide="scan-text"></i>
+
+                    OCR
+
+                </a>
+
+                <a href="merge.html">
+
+                    <i data-lucide="file-plus"></i>
+
+                    Merge PDFs
+
+                </a>
+
+                <a href="split.html">
+
+                    <i data-lucide="scissors"></i>
+
+                    Split PDF
+
+                </a>
+
+                <a href="compress.html">
+
+                    <i data-lucide="arrow-down-circle"></i>
+
+                    Compress PDF
+
+                </a>
+
+                <a href="image-compress.html">
+
+                    <i data-lucide="image"></i>
+
+                    Image Compress
+
+                </a>
+
+                <!-- HISTORY -->
+
+                <a href="history.html">
+
+                    <i data-lucide="history"></i>
+
+                    History
+
+                </a>
+
+                <!-- SETTINGS -->
+
+                <a href="settings.html">
+
+                    <i data-lucide="settings"></i>
+
+                    Settings
+
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN -->
+
+   
+<!-- TOP RIGHT -->
+
+<div class="top-actions">
+
+    <div class="theme-toggle">
+
+        <i data-lucide="moon"></i>
+
+    </div>
+
+</div>
+
+
+
+            <!-- MODERN CONVERTER -->
+
+            <section class="modern-converter glass">
+
+                <!-- HEADER -->
+
+                <div class="modern-header">
+
+                    <h1>
+
+                        Convert Files Instantly
+
+                    </h1>
+
+                    <p>
+
+                        Upload a file, choose an output format, and convert in seconds.
+
+                    </p>
+
+                </div>
+
+                <!-- TYPES -->
+
+                <div class="convert-types modern-types">
+
+                    <!-- FROM -->
+
+                    <div class="type-box glass">
+
+                        <label>
+
+                            Convert From
+
+                        </label>
+
+                        <select class="convert-select">
+
+                            <option>PDF</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- SWAP -->
+
+                    <div class="swap-icon">
+
+                        <i data-lucide="arrow-right-left"></i>
+
+                    </div>
+
+                    <!-- TO -->
+
+                    <div class="type-box glass">
+
+                        <label>
+
+                            Convert To
+
+                        </label>
+
+                        <select class="convert-select">
+
+                            <option>DOCX</option>
+
+                            <option>PPTX</option>
+
+                            <option>PNG</option>
+
+                            <option>JPG</option>
+
+                            <option>TXT</option>
+
+                            <option>XLSX</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <!-- DROP AREA -->
+
+                <div class="modern-drop">
+
+                    <i data-lucide="upload-cloud"></i>
+
+                    <h2>
+
+                        Drag & Drop Your File
+
+                    </h2>
+
+                    <p>
+
+                        or select a file from your device
+
+                    </p>
+
+                    <!-- FILE -->
+
+                    <input
+                    type="file"
+                    id="pdfUpload"
+                    hidden>
+
+                    <!-- BUTTON -->
+
+                    <button
+                    class="upload-btn"
+                    onclick="document.getElementById('pdfUpload').click()">
+
+                        Choose File
+
+                    </button>
+
+                </div>
+
+                <!-- CONVERT BUTTON -->
+
+                <button class="convert-btn modern-btn">
+
+                    Start Conversion
+
+                </button>
+
+                <!-- INFO GRID -->
+
+                <div class="info-grid">
+
+                    <!-- FAST -->
+
+                    <div class="info-card glass">
+
+                        <h3>
+
+                            Fast Processing
+
+                        </h3>
+
+                        <p>
+
+                            Optimized conversion engine.
+
+                        </p>
+
+                    </div>
+
+                    <!-- SECURE -->
+
+                    <div class="info-card glass">
+
+                        <h3>
+
+                            Secure Files
+
+                        </h3>
+
+                        <p>
+
+                            Automatic cleanup after processing.
+
+                        </p>
+
+                    </div>
+
+                    <!-- FORMATS -->
+
+                    <div class="info-card glass">
+
+                        <h3>
+
+                            Multiple Formats
+
+                        </h3>
+
+                        <p>
+
+                            PDF, DOCX, PPTX, Images and more.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- LUCIDE -->
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <script>
+
+        lucide.createIcons();
+
+    </script>
+
+    <!-- SCRIPT -->
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
