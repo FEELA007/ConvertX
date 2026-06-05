@@ -402,7 +402,12 @@ def ocr():
         return {
             "error": str(e)
         }, 500
-
+@app.route("/")
+def home():
+    return {
+        "status": "online",
+        "message": "ConvertX API is running"
+    }
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
