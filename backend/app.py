@@ -11,7 +11,7 @@ from pdf2image import convert_from_path
 from PyPDF2 import PdfReader, PdfMerger, PdfWriter
 from pdf2docx import Converter
 from typing import List
-print("THIS IS THE NEW APP.PY")
+
 import pytesseract
 
 app = Flask(__name__)
