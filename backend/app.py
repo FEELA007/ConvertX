@@ -16,8 +16,7 @@ import pytesseract
 
 app = Flask(__name__)
 CORS(app)
-GHOSTSCRIPT_PATH = r"C:\Program Files\gs\gs10.07.1\bin\gswin64c.exe"
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
