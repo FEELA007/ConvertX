@@ -110,7 +110,7 @@ document.getElementById("ocrResult").style.display = "none";
 
                 const response =
                 await fetch(
-                    "http://127.0.0.1:5000/ocr",
+                    "https://convertx-cfki.onrender.com/ocr",
                     {
                         method:"POST",
                         body:formData
