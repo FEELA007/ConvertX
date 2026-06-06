@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 FROM python:3.11-slim
 
 RUN apt-get update && apt-get install -y \
@@ -40,4 +40,4 @@ COPY . .
 EXPOSE 10000
 
 CMD ["python", "backend/app.py"]
->>>>>>> 6bbef9a597d98c8e9bfbee738c591b50ef4fe4e6
+
