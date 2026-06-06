@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             progressBar.style.width = "20%";
             progressText.textContent = "Uploading file...";
 
-            const response = await fetch("https://convertx-cfki.onrender.com/split", { method: "POST", body: formData });
+            const response = await fetch("https://convertx-aa2j.onrender.com/split", { method: "POST", body: formData });
             if (!response.ok) {
                 const error = await response.text();
                 alert(error);
