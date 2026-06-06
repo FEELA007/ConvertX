@@ -27,7 +27,7 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 LIBREOFFICE_PATH = r"C:\Program Files\LibreOffice\program\soffice.exe"
 POPPLER_PATH = r"C:\poppler-26.02.0\Library\bin"
-import subprocess
+
 
 @app.route("/check")
 def check():
