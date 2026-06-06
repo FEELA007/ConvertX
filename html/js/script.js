@@ -139,7 +139,7 @@ console.log("BUTTON CLICKED");
 progressBar.style.width = "10%";
 progressText.textContent = "Uploading...";
                 const response = await fetch(
-                    "https://convertx-cfki.onrender.com/convert",
+                    "https://convertx-aa2j.onrender.com/convert",
                     {
                         method: "POST",
                         body: formData
