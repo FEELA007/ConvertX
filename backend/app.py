@@ -31,7 +31,7 @@ POPPLER_PATH = r"C:\poppler-26.02.0\Library\bin"
 
 @app.route("/check3")
 def check3():
-    import subprocess
+   
 
     return {
         "tesseract": subprocess.getoutput("tesseract --version"),
