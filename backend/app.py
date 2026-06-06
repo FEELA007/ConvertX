@@ -29,17 +29,15 @@ LIBREOFFICE_PATH = r"C:\Program Files\LibreOffice\program\soffice.exe"
 POPPLER_PATH = r"C:\poppler-26.02.0\Library\bin"
 
 
-@app.route("/check")
-def check():
-    try:
-        return {
-            "tesseract": subprocess.getoutput("which tesseract"),
-            "gs": subprocess.getoutput("which gs"),
-            "soffice": subprocess.getoutput("which soffice"),
-            "pdftoppm": subprocess.getoutput("which pdftoppm")
-        }
-    except Exception as e:
-        return {"error": str(e)}
+@app.route("/check3")
+def check3():
+    import subprocess
+
+    return {
+        "tesseract": subprocess.getoutput("tesseract --version"),
+        "libreoffice": subprocess.getoutput("libreoffice --version"),
+        "soffice": subprocess.getoutput("soffice --version")
+    }
 
 def cleanup_old_files(folder: str, minutes: int) -> None:
     now = datetime.now().timestamp()
