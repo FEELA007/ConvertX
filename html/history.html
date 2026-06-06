@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>
+  ConvertX - History
+  </title>
+
+  <script>
+if(localStorage.getItem("theme") === "dark"){
+    document.documentElement.classList.add("dark");
+}
+</script>
+    <style>
+        html.dark, body.dark { background: #0f1117 !important; color: #ffffff !important; transition: none !important; }
+        html, body { transition: none !important; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="bg-blur blur1"></div>
+    <div class="bg-blur blur2"></div>
+
+    <div class="layout">
+
+        <aside class="sidebar glass">
+
+            <div class="logo">
+                <div class="logo-box">
+                    <img src="/assets/logo.png.png" alt="ConvertX Logo">
+                </div>
+                <div>
+                    <h2>Convert<span>X</span></h2>
+                    <p>Free forever</p>
+                </div>
+            </div>
+
+            <div class="menu">
+                <a href="index.html">
+                    <i data-lucide="house"></i>
+                    Home
+                </a>
+                <a href="convert.html">
+                    <i data-lucide="recycle"></i>
+                    Convert
+                </a>
+                <a href="ocr.html">
+                    <i data-lucide="scan-text"></i>
+                    Scannable AI
+                </a>
+                <a href="merge.html">
+                    <i data-lucide="file-plus"></i>
+                    Merge PDFs
+                </a>
+                <a href="split.html">
+                    <i data-lucide="scissors"></i>
+                    Split PDF
+                </a>
+                <a href="compress.html">
+                    <i data-lucide="arrow-down-circle"></i>
+                    Compress PDF
+                </a>
+                <a href="image-compress.html">
+                    <i data-lucide="image"></i>
+                    Image Compress
+                </a>
+                
+                <a href="history.html" class="active">
+                    <i data-lucide="history"></i>
+                    History
+                </a>
+                <a href="settings.html">
+                    <i data-lucide="settings"></i>
+                    Settings
+                </a>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+
+            <section class="modern-converter glass">
+
+                <div class="top-actions">
+                    <div class="theme-toggle">
+                        <i data-lucide="moon"></i>
+                    </div>
+                </div>
+
+                <div class="modern-header">
+                    <h1>History</h1>
+                    <p>All conversion and OCR session actions are stored locally in your browser.</p>
+                </div>
+
+                <div class="history-controls">
+                    <button id="clearHistory" class="clear-btn">Clear History</button>
+                </div>
+
+                <div id="historyList" class="history-list"></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>lucide.createIcons();</script>
+    <script src="../js/history.js"></script>
+
+</body>
+
+</html>
+
+
+

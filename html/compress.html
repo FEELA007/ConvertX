@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>
+  ConvertX - Compress PDF
+  </title>
+
+  <script>
+if(localStorage.getItem("theme") === "dark"){
+    document.documentElement.classList.add("dark");
+}
+</script>
+
+</script>
+    <style>
+        html.dark, body.dark { background: #0f1117 !important; color: #ffffff !important; transition: none !important; }
+        html, body { transition: none !important; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/convert.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="bg-blur blur1"></div>
+    <div class="bg-blur blur2"></div>
+
+    <div class="layout">
+
+        <aside class="sidebar glass">
+            <div class="logo">
+                <div class="logo-box">
+                    <img src="/assets/logo.png.png" alt="ConvertX Logo">
+                </div>
+                <div>
+                    <h2>Convert<span>X</span></h2>
+                    <p>Free forever</p>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="index.html">
+                    <i data-lucide="house"></i>
+                    Home
+                </a>
+                <a href="convert.html">
+                    <i data-lucide="recycle"></i>
+                    Convert
+                </a>
+                 <a href="ocr.html">
+                    <i data-lucide="scan-text"></i>
+                    Scannable AI
+                </a> 
+                <a href="merge.html">
+                    <i data-lucide="file-plus"></i>
+                    Merge PDFs
+                </a>
+                <a href="split.html">
+                    <i data-lucide="scissors"></i>
+                    Split PDF
+                </a>
+                <a href="compress.html" class="active">
+                    <i data-lucide="arrow-down-circle"></i>
+                    Compress PDF
+                </a>
+                <a href="image-compress.html">
+                    <i data-lucide="image"></i>
+                    Image Compress
+                </a>
+               
+                <a href="history.html">
+                    <i data-lucide="history"></i>
+                    History
+                </a>
+                <a href="settings.html">
+                    <i data-lucide="settings"></i>
+                    Settings
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="modern-converter glass">
+                <div class="top-actions">
+                    <div class="theme-toggle">
+                        <i data-lucide="moon"></i>
+                    </div>
+                </div>
+                <div class="modern-header">
+                    <h1>Compress PDF</h1>
+                    <p>Reduce PDF size with one click.</p>
+                </div>
+                <div class="modern-drop" id="dropZone">
+                    <i data-lucide="arrow-down-circle"></i>
+                    <h2>Upload a PDF</h2>
+                    <p>Select a PDF and compress it for smaller file size.</p>
+                    <input type="file" id="compressFile" accept=".pdf" hidden>
+                    <div class="file-actions">
+                        <button class="upload-btn" onclick="document.getElementById('compressFile').click()">Choose PDF</button>
+                        <button class="clear-btn" id="clearFiles">Clear</button>
+                    </div>
+                    <p id="selectedFile" class="selected-file">No file selected</p>
+                </div>
+                <div class="type-box glass" style="margin-top: 18px;">
+                    <label>Quality</label>
+                    <select id="qualitySelect" class="convert-select">
+                        <option value="85">High Quality</option>
+                        <option value="70" selected>Balanced</option>
+                        <option value="55">Smaller File</option>
+                    </select>
+                </div>
+                <div class="progress-container" id="progressContainer"><div class="progress-bar" id="progressBar"></div></div>
+                <p id="progressText"></p>
+                <button type="button" class="convert-btn modern-btn" id="compressBtn">Compress PDF</button>
+                <div class="info-grid">
+                    <div class="info-card glass"><h3>Smaller Files</h3><p>Reduce PDF size without extra apps.</p></div>
+                    <div class="info-card glass"><h3>Fast Compression</h3><p>Upload and compress in seconds.</p></div>
+                    <div class="info-card glass"><h3>Safe</h3><p>Output file is downloaded directly.</p></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>lucide.createIcons();</script>
+    <script src="../js/compress.js"></script>
+</body>
+
+</html>
+
+
+

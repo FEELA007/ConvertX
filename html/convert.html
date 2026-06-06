@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConvertX - Universal Converter</title>
+
+  <script>
+if(localStorage.getItem("theme") === "dark"){
+    document.documentElement.classList.add("dark");
+}
+</script>
+
+  <style>
+    html.dark, body.dark { background: #0f1117 !important; color: #ffffff !important; transition: none !important; }
+    html, body { transition: none !important; }
+  </style>
+
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/convert.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="bg-blur blur1"></div>
+  <div class="bg-blur blur2"></div>
+
+  <div class="layout">
+
+    <aside class="sidebar glass">
+      <div class="logo">
+        <div class="logo-box">
+          <img src="/assets/logo.png.png" alt="ConvertX Logo">
+        </div>
+        <div>
+          <h2>Convert<span>X</span></h2>
+          <p>Free forever</p>
+        </div>
+      </div>
+
+      <div class="menu">
+        <a href="index.html">
+          <i data-lucide="house"></i>
+          Home
+        </a>
+        <a href="convert.html" class="active">
+          <i data-lucide="recycle"></i>
+          Convert
+        </a>
+        <a href="ocr.html">
+          <i data-lucide="scan-text"></i>
+          Scannable AI
+        </a>
+        <a href="merge.html">
+          <i data-lucide="file-plus"></i>
+          Merge PDFs
+        </a>
+        <a href="split.html">
+          <i data-lucide="scissors"></i>
+          Split PDF
+        </a>
+        <a href="compress.html">
+          <i data-lucide="arrow-down-circle"></i>
+          Compress PDF
+        </a>
+        <a href="image-compress.html">
+          <i data-lucide="image"></i>
+          Image Compress
+        </a>
+        <a href="history.html">
+          <i data-lucide="history"></i>
+          History
+        </a>
+        <a href="settings.html">
+          <i data-lucide="settings"></i>
+          Settings
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+
+      <section class="modern-converter glass">
+
+    <div class="top-actions">
+
+        <div class="theme-toggle">
+            <i data-lucide="moon"></i>
+        </div>
+
+    </div>
+
+    <div class="modern-header">
+
+        <h1>Universal File Converter</h1>
+
+        <p>
+            Convert PDFs, Word files, PowerPoints, Images, Excel files and more instantly.
+        </p>
+
+    </div>
+
+    <div class="convert-types">
+
+        <div class="type-box glass">
+
+            <label>Convert From</label>
+
+            <select class="convert-select" id="fromFormat">
+                <option>PDF</option>
+                <option>DOCX</option>
+                <option>PPTX</option>
+                <option>XLSX</option>
+                <option>PNG</option>
+                <option>JPG</option>
+                <option>WEBP</option>
+            </select>
+
+        </div>
+
+        <div class="swap-icon">
+            <i data-lucide="arrow-right-left"></i>
+        </div>
+
+        <div class="type-box glass">
+
+            <label>Convert To</label>
+
+            <select class="convert-select" id="toFormat">
+                <option>DOCX</option>
+                <option>PDF</option>
+                <option>PPTX</option>
+                <option>XLSX</option>
+                <option>PNG</option>
+                <option>JPG</option>
+                <option>WEBP</option>
+                <option>TXT</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div class="modern-drop glass" id="dropZone">
+
+        <i data-lucide="upload-cloud"></i>
+
+        <h2>Drag & Drop Your Files</h2>
+
+        <p>Upload any file and convert instantly</p>
+
+        <input
+            type="file"
+            id="fileUpload"
+            multiple
+            hidden>
+
+        <div class="file-actions">
+
+            <button
+                class="upload-btn"
+                onclick="document.getElementById('fileUpload').click()">
+
+                Choose Files
+
+            </button>
+
+            <button
+                class="clear-btn"
+                id="clearFiles">
+
+                Clear
+
+            </button>
+
+        </div>
+
+        <p
+            id="selectedFile"
+            class="selected-file">
+
+            No files selected
+
+        </p>
+
+        <div class="supported-formats">
+
+            PDF • DOCX • PPTX • XLSX • PNG • JPG • WEBP • TXT
+
+        </div>
+
+    </div>
+
+    <div
+        class="progress-container"
+        id="progressContainer">
+
+        <div
+            class="progress-bar"
+            id="progressBar">
+
+        </div>
+
+    </div>
+
+    <p id="progressText"></p>
+
+    <button
+    type="button"
+    class="convert-btn"
+    id="convertBtn">
+
+    Start Conversion
+
+</button>
+
+    <div class="info-grid">
+
+        <div class="info-card glass">
+
+            <h3>Fast Processing</h3>
+
+            <p>
+                Optimized high-speed conversion engine.
+            </p>
+
+        </div>
+
+        <div class="info-card glass">
+
+            <h3>Secure Files</h3>
+
+            <p>
+                Files are automatically removed after conversion.
+            </p>
+
+        </div>
+
+        <div class="info-card glass">
+
+            <h3>Multiple Formats</h3>
+
+            <p>
+                Supports PDF, DOCX, PPTX, Images, Excel and more.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>lucide.createIcons();</script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

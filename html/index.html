@@ -1,0 +1,440 @@
+﻿<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ConvertX</title>
+
+  <script>
+  if(localStorage.getItem("theme") === "dark"){
+      document.documentElement.classList.add("dark");
+  }
+  </script>
+
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/home.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+
+  <div class="bg-blur blur1"></div>
+  <div class="bg-blur blur2"></div>
+
+  <!-- MAIN LAYOUT -->
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar glass">
+
+      <!-- LOGO -->
+
+      <div class="logo">
+
+        <div class="logo-box">
+
+          <img src="/assets/logo.png.png" alt="ConvertX Logo">
+
+        </div>
+
+        <div>
+          <h2>Convert<span>X</span></h2>
+          <p>Free forever</p>
+        </div>
+
+      </div>
+
+      <!-- MENU -->
+
+      <div class="menu">
+
+        <!-- HOME -->
+
+        <a href="index.html" class="active">
+
+          <i data-lucide="house"></i>
+
+          Home
+
+        </a>
+
+        <!-- CONVERT -->
+
+        <a href="convert.html">
+
+          <i data-lucide="recycle"></i>
+
+          Convert
+
+        </a>
+
+        <!-- OCR -->
+
+        <a href="ocr.html">
+
+          <i data-lucide="scan-text"></i>
+
+          Scannable AI
+
+        </a>
+
+        <a href="merge.html">
+
+          <i data-lucide="file-plus"></i>
+
+          Merge PDFs
+
+        </a>
+
+        <a href="split.html">
+
+          <i data-lucide="scissors"></i>
+
+          Split PDF
+
+        </a>
+
+        <a href="compress.html">
+
+          <i data-lucide="arrow-down-circle"></i>
+
+          Compress PDF
+
+        </a>
+
+        <a href="image-compress.html">
+
+          <i data-lucide="image"></i>
+
+          Image Compress
+
+        </a>
+
+        <!-- HISTORY -->
+
+        <a href="history.html">
+
+          <i data-lucide="history"></i>
+
+          History
+
+        </a>
+
+        <!-- SETTINGS -->
+
+        <a href="settings.html">
+
+          <i data-lucide="settings"></i>
+
+          Settings
+
+        </a>
+
+      </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+      <!-- TOPBAR -->
+
+      <div class="topbar">
+
+        <input
+          type="text"
+          class="search"
+          placeholder="Search conversions...">
+
+        <!-- DARK MODE -->
+
+        <div class="theme-toggle">
+
+          <i data-lucide="moon"></i>
+
+        </div>
+
+      </div>
+
+      <!-- HERO -->
+
+      <section class="hero glass">
+
+        <div class="hero-left">
+
+          <p class="hello">
+
+            <i data-lucide="heart-handshake"></i>
+
+            Hello there!
+
+          </p>
+
+          <h1>
+
+            Convert anything,
+
+            <span>instantly.</span>
+
+          </h1>
+
+          <p class="sub">
+
+            Simple tools for fast and seamless file conversion.
+
+          </p>
+
+<a href="convert.html" class="hero-btn">
+
+    + Start New Conversion
+
+</a>
+
+
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="hero-right">
+
+          <div class="floating-card glass">
+            PDF
+          </div>
+
+          <div class="floating-card glass word">
+            DOCX
+          </div>
+
+          <div class="floating-card glass ppt">
+            PPT
+          </div>
+
+          <div class="main-file glass">
+            DOC
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- QUICK TOOLS -->
+
+<div class="tool-grid">
+
+  <!-- PDF TO WORD -->
+
+  <a href="convert.html?from=PDF&to=DOCX" class="tool-link">
+
+    <div class="tool-card glass">
+
+      <div class="tool-icon red">
+        PDF
+      </div>
+
+      <h3>
+        PDF to Word
+      </h3>
+
+      <p>
+        Convert PDF files into editable DOCX documents.
+      </p>
+
+    </div>
+
+  </a>
+
+  <!-- WORD TO PDF -->
+
+  <a href="convert.html?from=DOCX&to=PDF" class="tool-link">
+
+    <div class="tool-card glass">
+
+      <div class="tool-icon blue">
+        W
+      </div>
+
+      <h3>
+        Word to PDF
+      </h3>
+
+      <p>
+        Turn DOCX files into professional PDFs.
+      </p>
+
+    </div>
+
+  </a>
+
+  <!-- IMAGE TO PDF -->
+
+  <a href="convert.html?from=PNG&to=PDF" class="tool-link">
+
+    <div class="tool-card glass">
+
+      <div class="tool-icon green">
+        IMG
+      </div>
+
+      <h3>
+        Image to PDF
+      </h3>
+
+      <p>
+        Convert JPG and PNG images into PDFs.
+      </p>
+
+    </div>
+
+  </a>
+
+  <!-- IMAGE TO TEXT -->
+
+  <a href="ocr.html" class="tool-link">
+
+    <div class="tool-card glass">
+
+      <div class="tool-icon purple">
+        OCR
+      </div>
+
+      <h3>
+        Image to Text
+      </h3>
+
+      <p>
+        Extract text from images using OCR.
+      </p>
+
+    </div>
+
+  </a>
+
+  <!-- MERGE PDF -->
+
+  <a href="merge.html" class="tool-link">
+
+    <div class="tool-card glass">
+
+      <div class="tool-icon teal">
+        MERGE
+      </div>
+
+      <h3>
+        Merge PDFs
+      </h3>
+
+      <p>
+        Combine multiple PDF files into a single document.
+      </p>
+
+    </div>
+
+  </a>
+
+  <!-- SPLIT PDF -->
+
+  <a href="split.html" class="tool-link">
+
+    <div class="tool-card glass">
+
+      <div class="tool-icon amber">
+        SPLIT
+      </div>
+
+      <h3>
+        Split PDF
+      </h3>
+
+      <p>
+        Extract selected pages from a PDF.
+      </p>
+
+    </div>
+
+  </a>
+
+  <!-- COMPRESS PDF -->
+
+  <a href="compress.html" class="tool-link">
+
+    <div class="tool-card glass">
+
+      <div class="tool-icon violet">
+        ZIP
+      </div>
+
+      <h3>
+        Compress PDF
+      </h3>
+
+      <p>
+        Reduce PDF file size for easier sharing.
+      </p>
+
+    </div>
+
+  </a>
+
+  <!-- IMAGE COMPRESS -->
+
+  <a href="image-compress.html" class="tool-link">
+
+    <div class="tool-card glass">
+
+      <div class="tool-icon lime">
+        IMG
+      </div>
+
+      <h3>
+        Image Compress
+      </h3>
+
+      <p>
+        Reduce image file size while preserving quality.
+      </p>
+
+    </div>
+
+  </a>
+
+</div>
+
+        <!-- DYNAMIC ITEMS -->
+
+        <div id="recentList"></div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- LUCIDE -->
+    <!-- LUCIDE -->
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <script>
+
+        lucide.createIcons();
+
+    </script>
+
+    <!-- SCRIPT -->
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+

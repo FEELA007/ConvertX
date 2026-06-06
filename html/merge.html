@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ConvertX - Merge PDFs</title>
+
+    <script>
+if(localStorage.getItem("theme") === "dark"){
+    document.documentElement.classList.add("dark");
+}
+</script>
+
+    <style>
+        html.dark, body.dark { background: #0f1117 !important; color: #ffffff !important; transition: none !important; }
+        html, body { transition: none !important; }
+    </style>
+
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/convert.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+    <div class="bg-blur blur1"></div>
+    <div class="bg-blur blur2"></div>
+
+    <div class="layout">
+
+        <aside class="sidebar glass">
+            <div class="logo">
+                <div class="logo-box">
+                    <img src="/assets/logo.png.png" alt="ConvertX Logo">
+                </div>
+                <div>
+                    <h2>Convert<span>X</span></h2>
+                    <p>Free forever</p>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="index.html">
+                    <i data-lucide="house"></i>
+                    Home
+                </a>
+                <a href="convert.html">
+                    <i data-lucide="recycle"></i>
+                    Convert
+                </a>
+                <a href="ocr.html">
+                    <i data-lucide="scan-text"></i>
+                    Scannable AI
+                </a>
+                <a href="merge.html" class="active">
+                    <i data-lucide="file-plus"></i>
+                    Merge PDFs
+                </a>
+                <a href="split.html">
+                    <i data-lucide="scissors"></i>
+                    Split PDF
+                </a>
+                <a href="compress.html">
+                    <i data-lucide="arrow-down-circle"></i>
+                    Compress PDF
+                </a>
+                <a href="image-compress.html">
+                    <i data-lucide="image"></i>
+                    Image Compress
+                </a>
+                
+                <a href="history.html">
+                    <i data-lucide="history"></i>
+                    History
+                </a>
+                <a href="settings.html">
+                    <i data-lucide="settings"></i>
+                    Settings
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="modern-converter glass">
+                <div class="top-actions">
+                    <div class="theme-toggle">
+                        <i data-lucide="moon"></i>
+                    </div>
+                </div>
+                <div class="modern-header">
+                    <h1>Merge PDFs</h1>
+                    <p>Upload multiple PDF files and merge them into one document.</p>
+                </div>
+                <div class="modern-drop" id="dropZone">
+                    <i data-lucide="file-plus"></i>
+                    <h2>Upload PDF Files</h2>
+                    <p>Select multiple PDF documents to merge.</p>
+                    <input type="file" id="mergeFiles" accept=".pdf" multiple hidden>
+                    <div class="file-actions">
+                        <button class="upload-btn" onclick="document.getElementById('mergeFiles').click()">Choose PDFs</button>
+                        <button class="clear-btn" id="clearFiles">Clear</button>
+                    </div>
+                    <p id="selectedFile" class="selected-file">No files selected</p>
+                </div>
+                <div class="progress-container" id="progressContainer"><div class="progress-bar" id="progressBar"></div></div>
+                <p id="progressText"></p>
+                <button type="button" class="convert-btn modern-btn" id="mergeBtn">Merge PDFs</button>
+                <div class="info-grid">
+                    <div class="info-card glass"><h3>Fast Merge</h3><p>Combine PDF files quickly in one click.</p></div>
+                    <div class="info-card glass"><h3>Secure Files</h3><p>Uploads are temporary and deleted automatically.</p></div>
+                    <div class="info-card glass"><h3>One Output</h3><p>Get a single merged PDF file instantly.</p></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>lucide.createIcons();</script>
+    <script src="../js/merge.js"></script>
+</body>
+
+</html>
+
+
+
