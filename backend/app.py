@@ -25,9 +25,22 @@ OUTPUT_FOLDER = os.path.join(BASE_DIR, "converted")
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
-LIBREOFFICE_PATH = r"C:\Program Files\LibreOffice\program\soffice.exe"
-POPPLER_PATH = r"C:\poppler-26.02.0\Library\bin"
-
+if os.name == "nt":
+    LIBREOFFICE_PATH = r"C:\Program Files\LibreOffice\program\soffice.exe"
+    POPPLER_PATH = r"C:\poppler-26.02.0\Library\bin"
+    GHOSTSCRIPT_PATH = r"C:\Program Files\gs\gs10.07.1\bin\gswin64c.exe"
+else:
+    LIBREOFFICE_PATH = "soffice"
+    POPPLER_PATH = None
+    GHOSTSCRIPT_PATH = "gs"
+   
+@app.route("/dockercheck")
+def dockercheck():
+    import os
+    return {
+        "dockerfile_exists": os.path.exists("/app/Dockerfile"),
+        "os": os.uname().sysname
+    }
 
 @app.route("/check3")
 def check3():
@@ -71,7 +84,10 @@ def convert_image_to_pdf(input_path: str, output_path: str) -> None:
 
 
 def convert_pdf_to_images(input_path: str, output_dir: str, filename: str, to_format: str) -> List[str]:
-    images = convert_from_path(input_path, poppler_path=POPPLER_PATH)
+    if POPPLER_PATH:     
+       images = convert_from_path(input_path, poppler_path=POPPLER_PATH) 
+    else:     
+       images = convert_from_path(input_path)
     converted_files: List[str] = []
     ext = "jpg" if to_format in {"jpg", "jpeg"} else "png"
     save_format = "JPEG" if ext == "jpg" else "PNG"
