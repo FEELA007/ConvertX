@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 .git
 __pycache__
 *.pyc
 backend/uploads
 backend/converted
+=======
+.git
+__pycache__
+*.pyc
+backend/uploads
+backend/converted
+>>>>>>> 6bbef9a597d98c8e9bfbee738c591b50ef4fe4e6

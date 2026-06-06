@@ -110,7 +110,11 @@ document.getElementById("ocrResult").style.display = "none";
 
                 const response =
                 await fetch(
+<<<<<<< HEAD
                     "https://convertx-3z99.onrender.com/ocr",
+=======
+                    "https://convertx-aa2j.onrender.com/ocr",
+>>>>>>> 6bbef9a597d98c8e9bfbee738c591b50ef4fe4e6
                     {
                         method:"POST",
                         body:formData

@@ -57,7 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
             progressBar.style.width = "20%";
             progressText.textContent = "Uploading file...";
 
+<<<<<<< HEAD
             const response = await fetch("https://convertx-3z99.onrender.com/compress_pdf", { method: "POST", body: formData });
+=======
+            const response = await fetch("https://convertx-aa2j.onrender.com/compress_pdf", { method: "POST", body: formData });
+>>>>>>> 6bbef9a597d98c8e9bfbee738c591b50ef4fe4e6
             if (!response.ok) {
                 const error = await response.text();
                 alert(error);
