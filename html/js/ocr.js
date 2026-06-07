@@ -109,18 +109,7 @@ document.getElementById("ocrResult").style.display = "none";
                 "Uploading image...";
 
                 const response =
-                await fetch(
-
-                    "https://convertx-3z99.onrender.com/ocr"
-
-               
-
-                    {
-                        method:"POST",
-                        body:formData
-                    }
-                );
-
+                await fetch("https://convertx-3z99.onrender.com/ocr", { method: "POST", body: formData });
 
                 progressBar.style.width = "80%";
                 progressText.textContent = "Extracting text...";
